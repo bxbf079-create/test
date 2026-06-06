@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>O'Sullivan Johanson Lawyers – Bendigo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --green:#1e4d2b;
+  --green-deep:#0f2318;
+  --green-mid:#2a6339;
+  --green-light:#e8f0ea;
+  --orange:#c8621a;
+  --white:#ffffff;
+  --off-white:#f9f9f7;
+  --cream:#f4f1ec;
+  --text:#1a1a1a;
+  --text-mid:#444;
+  --text-muted:#777;
+  --border:#e0ddd8;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden}
+
+
+
+/* ── NAV ── */
+.nav{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 2.5rem;border-bottom:1px solid rgba(255,255,255,0.08);background:var(--green-deep);position:sticky;top:0;z-index:100}
+.nav-logo img{height:48px;width:auto;display:block}
+.nav-links{display:flex;gap:2rem}
+.nav-links a{text-decoration:none;color:rgba(255,255,255,0.65);font-size:0.82rem;font-weight:400;transition:color 0.2s}
+.nav-links a:hover{color:white}
+.nav-cta{background:white;border:none;color:var(--green-deep);padding:0.5rem 1.3rem;border-radius:100px;font-size:0.78rem;font-weight:600;cursor:pointer;font-family:'Inter',sans-serif;transition:all 0.2s;text-decoration:none;display:inline-block}
+.nav-cta:hover{background:var(--cream);color:var(--green-deep)}
+.nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:0.25rem}
+.nav-hamburger i{font-size:22px;color:white}
+.mobile-menu{display:none;flex-direction:column;background:var(--green-deep);border-top:1px solid rgba(255,255,255,0.08);padding:1rem 2rem 1.5rem;gap:1rem}
+.mobile-menu.open{display:flex}
+.mobile-menu a{text-decoration:none;color:rgba(255,255,255,0.65);font-size:0.9rem;padding:0.4rem 0;border-bottom:1px solid rgba(255,255,255,0.08)}
+.mobile-menu .nav-cta{margin-top:0.5rem;text-align:center}
+
+/* ── HERO ── */
+.hero{padding:3.5rem 2.5rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;background:var(--white)}
+.hero-tag{font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--green);margin-bottom:1rem;display:flex;align-items:center;gap:0.5rem}
+.hero-tag::before{content:'';display:inline-block;width:1.5rem;height:1px;background:var(--green)}
+.hero-h{font-family:'Playfair Display',serif;font-size:3rem;font-weight:700;line-height:1.1;color:var(--text);margin-bottom:1.5rem}
+.hero-h em{font-style:italic;color:var(--green)}
+.hero-right-text{font-size:0.85rem;line-height:1.8;color:var(--text-muted);margin-bottom:1.75rem;font-family:'Cormorant Garamond',serif;font-size:1.05rem}
+.hero-btns{display:flex;gap:0.75rem;flex-wrap:wrap;align-items:center}
+.btn-fill{background:var(--green);color:white;border:none;padding:0.75rem 1.6rem;border-radius:100px;font-size:0.8rem;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;font-family:'Inter',sans-serif;text-decoration:none;transition:background 0.2s}
+.btn-fill:hover{background:var(--green-mid)}
+.btn-outline{background:transparent;color:var(--green);border:1.5px solid var(--green);padding:0.72rem 1.4rem;border-radius:100px;font-size:0.8rem;font-weight:500;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;font-family:'Inter',sans-serif;text-decoration:none;transition:all 0.2s}
+.btn-outline:hover{background:var(--green);color:white}
+
+/* ── HERO BANNER ── */
+.hero-banner{padding:0 2.5rem 3rem}
+.hero-banner-wrap{border-radius:16px;overflow:hidden;position:relative;height:420px}
+.hero-banner-wrap img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block}
+.hero-banner-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(15,35,24,0.5) 0%,rgba(15,35,24,0.1) 60%)}
+.hero-banner-caption{position:absolute;bottom:1.75rem;left:2rem;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);padding:0.75rem 1.25rem;border-radius:10px}
+.hero-banner-caption span{font-family:'Cormorant Garamond',serif;font-size:0.9rem;font-style:italic;color:rgba(255,255,255,0.92);letter-spacing:0.04em}
+
+/* ── ABOUT STRIP ── */
+.about{background:var(--green);padding:3.5rem 2.5rem;display:grid;grid-template-columns:80px 1fr;gap:2.5rem;align-items:center}
+.about-tag{font-size:0.62rem;letter-spacing:0.13em;text-transform:uppercase;color:rgba(255,255,255,0.4);writing-mode:vertical-rl;transform:rotate(180deg);white-space:nowrap}
+.about-p{font-family:'Cormorant Garamond',serif;font-size:1.15rem;line-height:1.85;color:rgba(255,255,255,0.85);max-width:640px;margin-bottom:2rem}
+.about-p strong{color:white;font-weight:600}
+.about-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:rgba(255,255,255,0.1);border-radius:10px;overflow:hidden;max-width:420px}
+.astat{background:rgba(255,255,255,0.05);padding:1.4rem 1.25rem}
+.astat-tag{font-size:0.6rem;letter-spacing:0.1em;color:rgba(255,255,255,0.3);margin-bottom:0.5rem;font-weight:500}
+.astat-n{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1}
+.astat-l{font-size:0.72rem;color:rgba(255,255,255,0.45);margin-top:0.35rem}
+
+/* ── TRUST BAR ── */
+.trust{background:var(--cream);padding:1.1rem 2.5rem;display:flex;gap:0;align-items:stretch;flex-wrap:wrap;border-bottom:1px solid var(--border)}
+.trust-item{display:flex;align-items:center;gap:0.55rem;font-size:0.78rem;color:var(--text-mid);padding:0.4rem 1.5rem 0.4rem 0;flex-shrink:0}
+.trust-item i{font-size:15px;color:var(--green);flex-shrink:0}
+.trust-div{width:1px;background:var(--border);margin:0 1rem;align-self:stretch}
+
+/* ── SERVICES ── */
+.services{padding:5rem 2.5rem;background:var(--off-white)}
+.sec-tag{font-size:0.65rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.6rem;display:flex;align-items:center;justify-content:center;gap:0.5rem}
+.sec-tag.left{justify-content:flex-start}
+.sec-h{font-family:'Playfair Display',serif;font-size:2.3rem;font-weight:700;color:var(--text);text-align:center;line-height:1.2;margin-bottom:3rem}
+.sec-h em{font-style:italic;color:var(--green)}
+.sec-h.left{text-align:left}
+.svc-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.svc-item{padding:1rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:3rem 1fr;gap:0.75rem;align-items:start;cursor:pointer;transition:all 0.25s}
+.svc-item.active{padding:1.25rem;background:var(--white);border:1px solid var(--border);border-radius:10px;margin-bottom:0.75rem;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.svc-num{font-size:0.68rem;color:var(--text-muted);font-weight:500;padding-top:3px;transition:color 0.2s}
+.svc-item.active .svc-num{color:var(--green)}
+.svc-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text-mid);transition:color 0.2s;line-height:1.4}
+.svc-item.active .svc-name{color:var(--text)}
+.svc-item:hover .svc-name{color:var(--green)}
+.svc-desc{font-size:0.78rem;color:var(--text-muted);line-height:1.65;margin-top:0.4rem;display:none}
+.svc-item.active .svc-desc{display:block}
+.svc-visual{border-radius:14px;overflow:hidden;position:relative;height:380px;background:#1a3020}
+.svc-visual img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.4s}
+.svc-visual:hover img{transform:scale(1.03)}
+.svc-visual-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,35,24,0.55) 0%,transparent 55%)}
+.svc-badge{position:absolute;bottom:1.25rem;left:1.25rem;background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.2);padding:0.6rem 1rem;border-radius:8px}
+.svc-badge-n{font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;color:white;line-height:1}
+.svc-badge-l{font-size:0.7rem;color:rgba(255,255,255,0.7);margin-top:0.2rem}
+
+/* ── WHY US ── */
+.why{padding:5rem 2.5rem;background:var(--white)}
+.why-top{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-bottom:3rem;align-items:end}
+.why-h{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;line-height:1.2;color:var(--text)}
+.why-p{font-family:'Cormorant Garamond',serif;font-size:1.05rem;line-height:1.8;color:var(--text-muted)}
+.why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem}
+.why-card{text-align:center;padding:1.5rem 1rem;border-radius:12px;background:var(--off-white);transition:all 0.25s}
+.why-card:hover{background:var(--green);transform:translateY(-3px)}
+.why-icon{width:50px;height:50px;border-radius:50%;background:var(--green);display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;transition:background 0.25s}
+.why-card:hover .why-icon{background:rgba(255,255,255,0.15)}
+.why-icon i{font-size:20px;color:white}
+.why-title{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:0.4rem;transition:color 0.25s}
+.why-card:hover .why-title{color:white}
+.why-desc{font-size:0.76rem;color:var(--text-muted);line-height:1.6;transition:color 0.25s}
+.why-card:hover .why-desc{color:rgba(255,255,255,0.65)}
+
+/* ── TEAM ── */
+.team{padding:5rem 2.5rem;background:var(--off-white)}
+.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+.tm{background:var(--white);border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:box-shadow 0.2s}
+.tm:hover{box-shadow:0 6px 24px rgba(0,0,0,0.1)}
+.tm-img{height:200px;overflow:hidden;background:linear-gradient(135deg,#2a5c38,#1a3020)}
+.tm-img img{width:100%;height:100%;object-fit:cover;object-position:top;display:block;transition:transform 0.35s}
+.tm:hover .tm-img img{transform:scale(1.04)}
+.tm-body{padding:1rem}
+.tm-name{font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:0.2rem}
+.tm-role{font-size:0.72rem;color:var(--text-muted);line-height:1.4}
+
+/* ── FAQ ── */
+.faq-section{padding:5rem 2.5rem;background:var(--off-white)}
+.faq-wrap{max-width:680px;margin:2.5rem auto 0}
+.faq-item{border-bottom:1px solid var(--border);padding:1.1rem 0;cursor:pointer}
+.faq-q{display:flex;justify-content:space-between;align-items:center;gap:1rem;font-family:'Cormorant Garamond',serif;font-size:1.05rem;font-weight:600;color:var(--text)}
+.faq-q i{font-size:18px;color:var(--text-muted);flex-shrink:0;transition:transform 0.25s}
+.faq-item.open .faq-q i{transform:rotate(45deg);color:var(--green)}
+.faq-a{font-size:0.82rem;color:var(--text-muted);line-height:1.75;margin-top:0.75rem;display:none}
+.faq-item.open .faq-a{display:block}
+
+/* ── CONTACT ── */
+.contact-section{padding:5rem 2.5rem;background:var(--cream)}
+.contact-inner{max-width:960px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.cd{display:flex;align-items:flex-start;gap:1rem;margin-bottom:1.25rem}
+.cd i{color:var(--green);font-size:18px;margin-top:2px;flex-shrink:0}
+.cd-l{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:0.2rem}
+.cd-v{font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--text);line-height:1.55;text-decoration:none;display:block}
+.cf{display:flex;flex-direction:column;gap:0.85rem}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:0.85rem}
+.fg{display:flex;flex-direction:column;gap:0.35rem}
+.fl{font-size:0.65rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)}
+.fi{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:0.7rem 1rem;font-family:'Inter',sans-serif;font-size:0.83rem;color:var(--text);outline:none;width:100%;transition:border-color 0.2s;-webkit-appearance:none}
+.fi:focus{border-color:var(--green)}
+textarea.fi{resize:vertical;min-height:90px}
+
+/* ── CTA BANNER ── */
+.cta-banner{margin:0 2.5rem 5rem;border-radius:18px;overflow:hidden;position:relative;min-height:280px;display:flex;align-items:center;justify-content:center}
+.cta-banner-img{position:absolute;inset:0}
+.cta-banner-img img{width:100%;height:100%;object-fit:cover;display:block}
+.cta-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(15,35,24,0.9) 0%,rgba(30,77,43,0.82) 100%)}
+.cta-content{position:relative;z-index:2;text-align:center;padding:3.5rem 2rem}
+.cta-content h2{font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;color:white;line-height:1.2;margin-bottom:0.75rem}
+.cta-content h2 em{font-style:italic}
+.cta-content p{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,0.65);margin-bottom:1.75rem;max-width:440px;margin-left:auto;margin-right:auto}
+.btn-white{background:white;color:var(--green);border:none;padding:0.8rem 2rem;border-radius:100px;font-size:0.82rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;gap:0.4rem;font-family:'Inter',sans-serif;text-decoration:none;transition:all 0.2s}
+.btn-white:hover{background:var(--cream)}
+
+/* ── FOOTER ── */
+.footer{background:#0d1f14;padding:3.5rem 2.5rem 1.5rem}
+.footer-top{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+.foot-logo img{height:40px;width:auto;filter:brightness(0) invert(1);opacity:0.75;margin-bottom:0.85rem;display:block}
+.foot-brand-desc{font-size:0.75rem;color:rgba(255,255,255,0.32);line-height:1.7;max-width:210px}
+.foot-col-title{font-size:0.68rem;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:1rem}
+.foot-col a{display:block;font-size:0.78rem;color:rgba(255,255,255,0.38);text-decoration:none;margin-bottom:0.55rem;transition:color 0.2s}
+.foot-col a:hover{color:rgba(255,255,255,0.85)}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.07);padding-top:1.25rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem}
+.foot-copy{font-size:0.7rem;color:rgba(255,255,255,0.22);line-height:1.6}
+.foot-social{display:flex;gap:0.6rem}
+.foot-social a{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.06);display:flex;align-items:center;justify-content:center;text-decoration:none;transition:background 0.2s}
+.foot-social a:hover{background:var(--green)}
+.foot-social i{font-size:14px;color:rgba(255,255,255,0.45)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  .nav-links,.nav-cta{display:none}
+  .nav-hamburger{display:block}
+  .hero{grid-template-columns:1fr;gap:1.5rem;padding:2.5rem 1.5rem 1.5rem}
+  .hero-h{font-size:2.2rem}
+  .hero-banner{padding:0 1.5rem 2rem}
+  .hero-banner-wrap{height:280px}
+  .about{grid-template-columns:1fr;gap:1.5rem;padding:2.5rem 1.5rem}
+  .about-tag{writing-mode:horizontal-tb;transform:none}
+  .about-stats{grid-template-columns:1fr 1fr;max-width:100%}
+  .trust{padding:1rem 1.5rem;gap:0.5rem}
+  .trust-div{display:none}
+  .trust-item{padding:0.3rem 0;font-size:0.74rem}
+  .services{padding:3.5rem 1.5rem}
+  .svc-layout{grid-template-columns:1fr}
+  .svc-visual{height:240px;order:-1}
+  .why{padding:3.5rem 1.5rem}
+  .why-top{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .team{padding:3.5rem 1.5rem}
+  .team-grid{grid-template-columns:1fr 1fr;gap:1rem}
+  .faq-section{padding:3.5rem 1.5rem}
+  .contact-section{padding:3.5rem 1.5rem}
+  .contact-inner{grid-template-columns:1fr;gap:2.5rem}
+  .cta-banner{margin:0 1.5rem 3.5rem}
+  .cta-content h2{font-size:1.75rem}
+  .footer-top{grid-template-columns:1fr 1fr;gap:2rem}
+  .footer{padding:2.5rem 1.5rem 1.25rem}
+}
+@media(max-width:520px){
+  .nav{padding:0.85rem 1.25rem}
+  .nav-logo img{height:36px}
+  .hero-h{font-size:1.9rem}
+  .hero-banner-wrap{height:200px}
+  .about-stats{grid-template-columns:1fr}
+  .why-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr 1fr}
+  .cta-content h2{font-size:1.5rem}
+  .footer-top{grid-template-columns:1fr}
+  .sec-h{font-size:1.8rem}
+  .cf-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#" class="nav-logo">
+    <img src="https://osjlaw.com.au/wp-content/uploads/2022/09/OSJ_logo.png" alt="O'Sullivan Johanson Lawyers">
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#team">Our Team</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="#contact" class="nav-cta">Contact Us</a>
+  <button class="nav-hamburger" onclick="document.getElementById('mobileMenu').classList.toggle('open')" aria-label="Menu">
+    <i class="ti ti-menu-2"></i>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="document.getElementById('mobileMenu').classList.remove('open')">Services</a>
+  <a href="#team" onclick="document.getElementById('mobileMenu').classList.remove('open')">Our Team</a>
+  <a href="#faq" onclick="document.getElementById('mobileMenu').classList.remove('open')">FAQ</a>
+  <a href="#contact" onclick="document.getElementById('mobileMenu').classList.remove('open')">Contact</a>
+  <a href="#contact" class="nav-cta">Contact Us</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div>
+    <div class="hero-tag">Bendigo's trusted legal practice</div>
+    <h1 class="hero-h">Your Partner For<br>Legal <em>Advisory ✦</em></h1>
+  </div>
+  <div>
+    <p class="hero-right-text">Striving to provide you with friendly service of the highest calibre, delivered at a fair & competitive price. Our solicitors are always willing to answer your questions — we will always arrange an appointment on the day you need it.</p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-fill"><i class="ti ti-arrow-right"></i> Get Started</a>
+      <a href="tel:0354402900" class="btn-outline"><i class="ti ti-phone"></i> 03 5440 2900</a>
+    </div>
+  </div>
+</section>
+
+<!-- HERO BANNER -->
+<div class="hero-banner">
+  <div class="hero-banner-wrap">
+    <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=1400&q=80&fit=crop" alt="Legal professional at work" loading="lazy">
+    <div class="hero-banner-overlay"></div>
+    <div class="hero-banner-caption">
+      <span>Victoria Chambers, Bendigo — Est. 1960s</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="about-tag">/ ABOUT</div>
+  <div>
+    <p class="about-p">Our firm handles over <strong>500 conveyances</strong> each and every year and you will get your advice from a qualified lawyer with a practicing certificate. We have been involved in the sale and purchase of most hotels and motels in Bendigo. Our <strong>deceased estate team has over 60 years combined experience</strong>. We think our track record speaks for itself.</p>
+    <div class="about-stats">
+      <div class="astat"><div class="astat-tag">/01</div><div class="astat-n">500+</div><div class="astat-l">Conveyances per year</div></div>
+      <div class="astat"><div class="astat-tag">/02</div><div class="astat-n">60+</div><div class="astat-l">Years combined estate experience</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-item"><i class="ti ti-circle-check"></i> Qualified lawyers, practicing certificates</div>
+  <div class="trust-div"></div>
+  <div class="trust-item"><i class="ti ti-circle-check"></i> Fair & competitive pricing</div>
+  <div class="trust-div"></div>
+  <div class="trust-item"><i class="ti ti-circle-check"></i> Same-day appointments available</div>
+  <div class="trust-div"></div>
+  <div class="trust-item"><i class="ti ti-circle-check"></i> Serving Bendigo since the 1960s</div>
+</div>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="sec-tag">/ SERVICES</div>
+  <h2 class="sec-h">Comprehensive Legal Support<br><em>at Every Step</em></h2>
+  <div class="svc-layout">
+    <div>
+      <div class="svc-item active" onclick="activateSvc(this)">
+        <div class="svc-num">/01</div>
+        <div><div class="svc-name">Conveyancing & Real Estate</div><div class="svc-desc">Our firm handles over 500 property transfers each year. You will always receive advice directly from a qualified lawyer with a practicing certificate — never a clerk acting alone.</div></div>
+      </div>
+      <div class="svc-item" onclick="activateSvc(this)">
+        <div class="svc-num">/02</div>
+        <div><div class="svc-name">Business Sales & Purchases</div><div class="svc-desc">Extensive experience in hotel, motel and small business transactions throughout the Bendigo region and beyond.</div></div>
+      </div>
+      <div class="svc-item" onclick="activateSvc(this)">
+        <div class="svc-num">/03</div>
+        <div><div class="svc-name">Deceased Estate Administration</div><div class="svc-desc">Our deceased estate team carries over 60 years of combined experience. We guide families through every step with care and clarity.</div></div>
+      </div>
+      <div class="svc-item" onclick="activateSvc(this)">
+        <div class="svc-num">/04</div>
+        <div><div class="svc-name">Wills & Powers of Attorney</div><div class="svc-desc">Professionally drafted wills and enduring powers of attorney to protect your wishes and provide peace of mind.</div></div>
+      </div>
+      <div class="svc-item" onclick="activateSvc(this)">
+        <div class="svc-num">/05</div>
+        <div><div class="svc-name">Family Law & General Litigation</div><div class="svc-desc">Sensitive, practical guidance through family law matters. Court representation across civil litigation with a focus on resolution.</div></div>
+      </div>
+      <div class="svc-item" onclick="activateSvc(this)">
+        <div class="svc-num">/06</div>
+        <div><div class="svc-name">Debt Recovery, Trusts & More</div><div class="svc-desc">Effective debt recovery, trust establishment, adverse possession, lost titles, and general law conversions — handled by specialists.</div></div>
+      </div>
+    </div>
+    <div class="svc-visual">
+      <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80&fit=crop" alt="Lawyer consulting client" loading="lazy">
+      <div class="svc-visual-overlay"></div>
+      <div class="svc-badge">
+        <div class="svc-badge-n">500+</div>
+        <div class="svc-badge-l">Conveyances per year</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="why-top">
+    <div>
+      <div class="sec-tag left">/ WHY US</div>
+      <h2 class="why-h sec-h left">Our Clients Are Always<br>Our Top Priority</h2>
+    </div>
+    <p class="why-p">Client-centric service is the cornerstone of our practice. We are dedicated to understanding your unique challenges and providing tailored legal solutions delivered with genuine warmth and expertise.</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><i class="ti ti-bulb"></i></div>
+      <div class="why-title">Practical Legal Strategy</div>
+      <div class="why-desc">We focus on pragmatic, cost-effective approaches to resolve your legal matters efficiently.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="ti ti-user-heart"></i></div>
+      <div class="why-title">Client Focused</div>
+      <div class="why-desc">We prioritise understanding and meeting the unique needs of every individual client.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="ti ti-certificate"></i></div>
+      <div class="why-title">Qualified Expertise</div>
+      <div class="why-desc">Every matter handled by a lawyer with a practicing certificate — always direct advice, never delegated.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><i class="ti ti-calendar-check"></i></div>
+      <div class="why-title">Same-Day Service</div>
+      <div class="why-desc">We will always endeavour to arrange an appointment on the day you need it, even if that day is today.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team" id="team">
+  <div class="sec-tag">/ OUR TEAM</div>
+  <h2 class="sec-h">Meet the People Behind<br><em>Your Legal Support</em></h2>
+  <div class="team-grid">
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_4769.jpg" alt="Michelle O'Sullivan" loading="lazy"></div><div class="tm-body"><div class="tm-name">Michelle O'Sullivan</div><div class="tm-role">Director / Lawyer</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_5221.jpg" alt="Sam Taylor" loading="lazy"></div><div class="tm-body"><div class="tm-name">Sam Taylor</div><div class="tm-role">Lawyer</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OSAJ.jpg" alt="Erin Molenaar" loading="lazy" style="transform:scaleX(-1)"></div><div class="tm-body"><div class="tm-name">Erin Molenaar</div><div class="tm-role">Lawyer</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_5038.jpg" alt="Kathleen Watts" loading="lazy"></div><div class="tm-body"><div class="tm-name">Kathleen Watts</div><div class="tm-role">Senior Conveyancing Clerk & Assistant to Michelle O'Sullivan</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_4852.jpg" alt="Sheree English" loading="lazy"></div><div class="tm-body"><div class="tm-name">Sheree English</div><div class="tm-role">Senior Conveyancing Clerk</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_4976.jpg" alt="Ashlee Eeles" loading="lazy"></div><div class="tm-body"><div class="tm-name">Ashlee Eeles</div><div class="tm-role">Senior Conveyancing Clerk</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_5123.jpg" alt="Maeve Tupper" loading="lazy"></div><div class="tm-body"><div class="tm-name">Maeve Tupper</div><div class="tm-role">Law Graduate</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_5211.jpg" alt="Eh k'lu Doh Soe Paung" loading="lazy"></div><div class="tm-body"><div class="tm-name">Eh k'lu Doh Soe Paung</div><div class="tm-role">Law Graduate</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_4712.jpg" alt="Leanne DeAraugo" loading="lazy"></div><div class="tm-body"><div class="tm-name">Leanne DeAraugo</div><div class="tm-role">Reception</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_4709.jpg" alt="Gabby Guseli" loading="lazy"></div><div class="tm-body"><div class="tm-name">Gabby Guseli</div><div class="tm-role">Office Assistant</div></div></div>
+    <div class="tm"><div class="tm-img"><img src="https://osjlaw.com.au/wp-content/uploads/2026/02/OJL.12.02.26_4914.jpg" alt="Lauren Bice" loading="lazy"></div><div class="tm-body"><div class="tm-name">Lauren Bice</div><div class="tm-role">General Office Assistant</div></div></div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+  <div class="sec-tag">/ FAQ</div>
+  <h2 class="sec-h">Frequently Asked Questions</h2>
+  <div class="faq-wrap">
+    <div class="faq-item open">
+      <div class="faq-q">What legal services does O'Sullivan Johanson offer?<i class="ti ti-plus"></i></div>
+      <div class="faq-a">We provide conveyancing, business sales and purchases, deceased estate administration, wills, powers of attorney, debt recovery, general litigation, family law, adverse possession, lost titles, trusts, and general law conversions.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How can I schedule a consultation?<i class="ti ti-plus"></i></div>
+      <div class="faq-a">Call us on 03 5440 2900, fax 03 5440 2999, or email info@osjlaw.com.au. We always endeavour to arrange an appointment on the day you need it — same-day appointments are available.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will I deal directly with a qualified lawyer?<i class="ti ti-plus"></i></div>
+      <div class="faq-a">Yes, always. Every matter is handled by a lawyer who holds a current practicing certificate. You will always receive advice from a qualified professional.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Where are you located?<i class="ti ti-plus"></i></div>
+      <div class="faq-a">Victoria Chambers, 5 Victoria Lane, Pall Mall, Bendigo — Victoria Lane runs off Pall Mall, between Mitchell Street and Williamson Street, near the Colonial Bank building.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="sec-tag left">/ GET IN TOUCH</div>
+      <h2 class="sec-h left" style="margin-bottom:1.75rem">We're Here<br><em>When You Need Us</em></h2>
+      <div class="cd"><i class="ti ti-map-pin"></i><div><div class="cd-l">Address</div><div class="cd-v">Victoria Chambers, 5 Victoria Lane<br>Pall Mall, Bendigo VIC</div></div></div>
+      <div class="cd"><i class="ti ti-phone"></i><div><div class="cd-l">Phone</div><a href="tel:0354402900" class="cd-v">03 5440 2900</a></div></div>
+      <div class="cd"><i class="ti ti-printer"></i><div><div class="cd-l">Fax</div><div class="cd-v">03 5440 2999</div></div></div>
+      <div class="cd"><i class="ti ti-mail"></i><div><div class="cd-l">Email</div><a href="mailto:info@osjlaw.com.au" class="cd-v">info@osjlaw.com.au</a></div></div>
+    </div>
+    <div class="cf">
+      <div class="cf-row">
+        <div class="fg"><label class="fl">Full name</label><input type="text" placeholder="Jane Smith" class="fi"></div>
+        <div class="fg"><label class="fl">Phone</label><input type="tel" placeholder="03 xxxx xxxx" class="fi"></div>
+      </div>
+      <div class="fg"><label class="fl">Email</label><input type="email" placeholder="jane@email.com" class="fi"></div>
+      <div class="fg"><label class="fl">Area of law</label>
+        <select class="fi">
+          <option value="">Select a service</option>
+          <option>Conveyancing</option><option>Business Sales & Purchases</option><option>Deceased Estate Administration</option><option>Wills</option><option>Powers of Attorney</option><option>Debt Recovery</option><option>General Litigation</option><option>Family Law</option><option>Adverse Possession</option><option>Lost Titles</option><option>Trusts</option><option>General Law Conversions</option>
+        </select>
+      </div>
+      <div class="fg"><label class="fl">Message</label><textarea class="fi" placeholder="Briefly describe your matter..."></textarea></div>
+      <button class="btn-fill" style="align-self:flex-start">Send Enquiry</button>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<div class="cta-banner">
+  <div class="cta-banner-img"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1400&q=80&fit=crop" alt="Legal office" loading="lazy"></div>
+  <div class="cta-overlay"></div>
+  <div class="cta-content">
+    <h2>Expert Legal Support,<br><em>One Click Away</em></h2>
+    <p>Your legal partner in Bendigo. Delivered at a fair price with the personal attention your matter deserves.</p>
+    <a href="#contact" class="btn-white"><i class="ti ti-arrow-right"></i> Get Started</a>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-top">
+    <div>
+      <div class="foot-logo"><img src="https://osjlaw.com.au/wp-content/uploads/2022/09/OSJ_logo.png" alt="O'Sullivan Johanson Lawyers"></div>
+      <p class="foot-brand-desc">Trusted legal solutions. Protecting your rights with expertise and care — Victoria Chambers, Bendigo.</p>
+    </div>
+    <div class="foot-col">
+      <div class="foot-col-title">Navigate</div>
+      <a href="#">Home</a><a href="#services">Services</a><a href="#team">Our Team</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-col-title">Services</div>
+      <a href="#services">Conveyancing</a><a href="#services">Wills & Estates</a><a href="#services">Family Law</a><a href="#services">Business Sales</a><a href="#services">Litigation</a>
+    </div>
+    <div class="foot-col">
+      <div class="foot-col-title">Contact</div>
+      <a href="tel:0354402900">03 5440 2900</a>
+      <a href="fax:0354402999">f: 03 5440 2999</a>
+      <a href="mailto:info@osjlaw.com.au">info@osjlaw.com.au</a>
+      <a href="https://maps.google.com/?q=5+Victoria+Lane+Bendigo" target="_blank">5 Victoria Lane, Bendigo</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="foot-copy">© 2022 O'Sullivan Johanson Lawyers. Directors Liability limited by a scheme under the Professional Standards Legislation.</span>
+    <div class="foot-social">
+      <a href="mailto:info@osjlaw.com.au" aria-label="Email"><i class="ti ti-mail"></i></a>
+      <a href="tel:0354402900" aria-label="Call"><i class="ti ti-phone"></i></a>
+      <a href="https://maps.google.com/?q=5+Victoria+Lane+Bendigo" target="_blank" aria-label="Map"><i class="ti ti-map-pin"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function activateSvc(el){
+  document.querySelectorAll('.svc-item').forEach(i=>i.classList.remove('active'));
+  el.classList.add('active');
+}
+document.querySelectorAll('.faq-item').forEach(item=>{
+  item.addEventListener('click',()=>item.classList.toggle('open'));
+});
+document.addEventListener('click',function(e){
+  const menu=document.getElementById('mobileMenu');
+  const btn=document.querySelector('.nav-hamburger');
+  if(!menu.contains(e.target)&&!btn.contains(e.target)) menu.classList.remove('open');
+});
+</script>
+</body>
+</html>
